@@ -15,24 +15,51 @@ body {
 
 div.header {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     background-color: black;
-    color: #3671d2;
     line-height: 10px;
     position: fixed;
     width: 100%;
     top: 0;
 }
 
-div.header > div img {
+.menu {
+    line-height: 50px;
+    margin: 14px 15px 14px 25px;
+    color: #3671d2;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 993px) {
+    .menu {
+        display: none;
+    }
+}
+
+div.logo {
+    display: flex;
+    color: #3671d2;
+    cursor: default;
+}
+
+div.logo > div img {
     margin: 14px 15px 14px 10px;
 }
 
-div.header > div h2{
+div.logo > div h2{
     margin-right: 30px;
 }
 
 /*The Welcome Bryan Part starts here*/
+.sidenav {
+    display: none;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
 div.row-dash {
     display: flex;
     flex-direction: column;
@@ -76,6 +103,7 @@ div.icons > div {
 div.icons > div:hover {
     background-color: #cccccc;
 }
+
 /*The Dashboard List & Overview Section*/
 div.dash {
     display: flex;
@@ -87,7 +115,7 @@ div.dash {
     background-color: white;
     top: 168px;
     left: 0;
-    overflow-x: hidden;
+    overflow-y: hidden;
     padding-top: 25px;
 }
 
@@ -117,6 +145,7 @@ div.dash > div a {
     color: black;
 }
 
+
 /*The body part*/
 .body-part {
     width: 75%;
@@ -130,6 +159,7 @@ div.dash > div a {
     .body-part {
         margin-left: 0;
         width: 100%;
+        transition: 0.6s;
     }
 
     div.row-dash {
@@ -375,6 +405,7 @@ div.bubu-usr {
 div.com-usr {
     display: flex;
     margin-left: 15px;
+    margin-right: 15px;
     align-items: center;
 }
 

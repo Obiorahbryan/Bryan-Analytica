@@ -13,12 +13,72 @@
 </head>
 <body>
     <header>
-        <div class="header">
-            <div>
-                <img src="img/bee-logo1.png" alt="Logo" width="20" height="auto">
+        <div id="mySidenav" class="sidenav">
+            <div class="col-1">
+                <div class="user"></div>
+                <div class="welcome">
+                    Welcome, <strong>Bryan</strong>
+                    <div class="icons">
+                        <div><i class="fa-solid fa-user"></i></div>
+                        <div><i class="fa-solid fa-envelope"></i></div>
+                        <div><i class="fa-solid fa-gear"></i></div>
+                    </div>
+                </div>
             </div>
-            <div>
-                <h2>Analytica</h2> 
+            <div class="dash">
+                <span style="font-size: 20px; padding: 10px 20px; cursor: default;">
+                Dashboard
+                </span>
+                <div onclick="closeNav()" class="close">
+                    <i class="fa-solid fa-square-xmark"></i>&nbsp;&nbsp;&nbsp; 
+                    <a href="javascript:void(0)" class="closebtn" >Close Menu</a>
+                </div>
+                <div class="overview">
+                    <i class="fa-solid fa-users"></i>&nbsp;&nbsp;
+                    <a href="#">Overview</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-eye"></i>&nbsp;&nbsp;
+                    <a href="#">Views</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-users"></i>&nbsp;&nbsp;
+                    <a href="#">Traffic</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-location-dot"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="#">Geo</a>
+                </div>
+                <div>
+                    <i class="fa-regular fa-gem"></i>&nbsp;&nbsp;&nbsp;
+                    <a href="#">Orders</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-bell"></i>
+                    &nbsp;&nbsp;
+                    <a href="#">News</a>
+                </div>
+                <div>
+                    <i class="fa-sharp fa-solid fa-building-columns"></i>&nbsp;&nbsp;&nbsp;
+                    <a href="#">General</a>
+                </div>
+                <div>
+                    <i class="fa-sharp fa-solid fa-clock-rotate-left"></i>&nbsp;&nbsp;&nbsp;
+                    <a href="#">History</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-gear"></i>
+                    &nbsp;&nbsp;
+                    <a href="#">Settings</a>
+                </div>
+            </div>
+        </div>
+        <div class="header">
+            <div><span onclick="openNav()" class="menu">&#9776;&nbsp;Menu 
+            </span></div>
+            <div class="logo">
+                <div><img src="img/bee-logo1.png" alt="Logo" width="20" height="auto"></div>
+                <div><h2>Analytica</h2></div>
             </div>
         </div>
     </header>
@@ -83,6 +143,15 @@
                 </div>
             </div>
         </div>
+        <script>
+            function openNav() {
+                    document.getElementById("mySidenav").style.display = "flex";
+                }
+
+            function closeNav() {
+                    document.getElementById("mySidenav").style.display = "none";
+            }
+        </script>
         <section class="body-part">
             <div>
                 <div class="gauge">
